@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legacy Farmers - Strategic Services Proposal</title>
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* --- Base & Print Layout Setup --- */
+        :root {
+            --primary: #1E6B3F;
+            --accent: #F59E0B;
+            --text-dark: #1A2421;
+            --text-muted: #617367;
+            --bg-light: #F4F8F5;
+            --border-color: #E2E8F0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: #FFFFFF;
+        }
+
+        /* Page Container (mimics letter size on screen) */
+        .proposal-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .page-break {
+            padding-top: 40px;
+            border-top: 1px dashed var(--border-color);
+            margin-top: 40px;
+        }
+
+        /* --- Typography --- */
+        h1, h2, h3, h4 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .text-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        /* --- Header & Cover --- */
+        .cover-header {
+            text-align: center;
+            padding: 80px 0 60px 0;
+        }
+
+        .logo-mark {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            background: var(--primary);
+            color: #FFFFFF;
+            font-size: 28px;
+            margin-bottom: 24px;
+        }
+
+        .logo-text {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 12px;
+        }
+
+        .logo-text span {
+            color: var(--accent);
+        }
+
+        .cover-subtitle {
+            font-size: 18px;
+            color: var(--text-muted);
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+
+        .divider {
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent);
+            margin: 20px auto;
+        }
+
+        /* --- Table Styling --- */
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+
+        .pricing-table th {
+            background-color: var(--bg-light);
+            border-bottom: 3px solid var(--primary);
+            color: var(--primary);
+            font-weight: 700;
+            text-align: left;
+            padding: 12px 16px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .pricing-table td {
+            border-bottom: 1px solid var(--border-color);
+            padding: 16px;
+            font-size: 14px;
+            vertical-align: top;
+        }
+
+        .pricing-table tr:hover {
+            background-color: var(--bg-light);
+        }
+
+        .price-col {
+            font-weight: 700;
+            color: var(--primary);
+            white-space: nowrap;
+        }
+
+        .desc-col strong {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 15px;
+        }
+
+        .desc-col span {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        /* --- Section Styling --- */
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--bg-light);
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title span {
+            color: var(--accent);
+        }
+
+        .info-card {
+            background-color: var(--bg-light);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .info-card h4 {
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        /* --- Footer / Sign Off --- */
+        .proposal-footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+            font-size: 12px;
+            color: var(--text-muted);
+            text-align: justify;
+        }
+
+        /* === Print Override Rules === */
+        @media print {
+            body {
+                background-color: #FFFFFF;
+                color: #000000;
+            }
+            .proposal-container {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+                border: none;
+                box-shadow: none;
+            }
+            .page-break {
+                page-break-before: always;
+                border-top: none;
+                margin-top: 0;
+                padding-top: 20px;
+            }
+            .pricing-table th {
+                background-color: #F8FAFC !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .info-card {
+                background-color: #F8FAFC !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="proposal-container">
+        
+        <!-- ================= PAGE 1 ================= -->
+        <div class="cover-header">
+            <div class="logo-mark">&#9728;</div>
+            <div class="logo-text">Legacy <span>Farmers</span></div>
+            <p class="cover-subtitle">Integrated Agricultural Strategy Proposal</p>
+            <div class="divider"></div>
+            <p style="font-size: 16px; max-width: 600px; margin: 40px auto 0 auto; text-align: center;">
+                A comprehensive strategic program aligning farmland tax equity, crop insurance risk mitigation, and grain marketing intelligence.
+            </p>
+        </div>
+
+        <!-- Strategic Pricing Table -->
+        <div style="margin-top: 40px;">
+            <h2 class="section-title">Program Pricing Sheet</h2>
+            <p>Our strategic services are billed individually to comply with federal insurance and tax guidelines, while functioning as a single coordinated program.</p>
+            
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th style="width: 35%;">Service Component</th>
+                        <th style="width: 45%;">Description</th>
+                        <th style="width: 20%; text-align: right;">Rate / Cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Service 1 -->
+                    <tr>
+                        <td class="desc-col">
+                            <strong>Legacy Nutrient Deductions</strong>
+                            <span>Tax Equity Analysis</span>
+                        </td>
+                        <td>
+                            Turnkey soil sampling, agronomic testing, and replacement-value documentation of existing residual soil fertility (P & K) in partnership with Boa Safra Ag.
+                        </td>
+                        <td class="price-col" style="text-align: right;">$40.00 / acre</td>
+                    </tr>
+                    <!-- Service 1 (Optional Upcharge) -->
+                    <tr>
+                        <td class="desc-col">
+                            <strong>Historical Data Collection</strong>
+                            <span>Optional Prep Upcharge</span>
+                        </td>
+                        <td>
+                            Retrieval, organization, and structuring of years of historical yield maps, fertilizer application logs, crop production history, shapefiles, and land purchase agreements.
+                        </td>
+                        <td class="price-col" style="text-align: right;">$15.00 / acre <br><span style="font-size: 11px; font-weight: normal; color: var(--text-muted);">Optional Upcharge</span></td>
+                    </tr>
+                    <!-- Service 2 -->
+                    <tr>
+                        <td class="desc-col">
+                            <strong>Strategic Crop Insurance</strong>
+                            <span>Risk Mitigation Floor</span>
+                        </td>
+                        <td>
+                            Placement and maintenance of Multi-Peril Revenue Protection (RP) structured with SCO and ECO endorsements to cover shallow losses.
+                        </td>
+                        <td class="price-col" style="text-align: right;">RMA Regulated<br><span style="font-size: 11px; font-weight: normal; color: var(--text-muted);">Paid to Insurance Co.</span></td>
+                    </tr>
+                    <!-- Service 3 -->
+                    <tr>
+                        <td class="desc-col">
+                            <strong>Grain Marketing Intelligence</strong>
+                            <span>Revenue Margin Capture</span>
+                        </td>
+                        <td>
+                            Advisory retainer coordinating crop pricing targets with crop insurance yield guarantees, weekly basis reports, and seasonal trend triggers.
+                        </td>
+                        <td class="price-col" style="text-align: right;">$5.00 / acre <br><span style="font-size: 11px; font-weight: normal; color: var(--text-muted);">Annual Retainer</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-card">
+                <h4>Coordinated Program Savings Example (1,000 Acres)</h4>
+                <p style="margin-bottom: 8px; font-size: 14px;"><strong>1. Tax Capital Recovered:</strong> $1.7M in soil deductions yields **$510,000** in tax savings (30% bracket).</p>
+                <p style="margin-bottom: 8px; font-size: 14px;"><strong>2. Marketing Upside:</strong> Pre-selling insured crop volume locks in an extra **$80,000** ($0.40/bu on 200 bu/ac).</p>
+                <p style="margin-bottom: 0; font-size: 14px;"><strong>3. Program Net Cost:</strong> $40,000 soil analysis fee + $5,000 marketing fee. **Net Capital Gained: $545,000**.</p>
+            </div>
+        </div>
+
+        <!-- ================= PAGE 2 ================= -->
+        <div class="page-break">
+            <h2 class="section-title"><span>Pillar 01</span> Legacy Nutrient Deductions Detail</h2>
+            <p>
+                When acquiring or inheriting farmland, you are purchasing not only real estate but also the "residual fertility" left behind in the soil from prior crop amendments.
+            </p>
+            
+            <div class="info-card">
+                <h4>Agronomic Soil Analysis & Data Demands</h4>
+                <p style="margin-bottom: 8px; font-size: 14px;">
+                    We partner with <strong>Boa Safra Ag</strong> to calculate the replacement market value of nutrients present in your soil. We document the levels of key macronutrients (Phosphorus, Potassium, and Lime) above standard agronomic baselines.
+                </p>
+                <p style="margin-bottom: 0; font-size: 14px;">
+                    <strong>Historical Data Requirements:</strong> Claiming this deduction requires years of historical farm logs (yield histories, fertilizer application records, crop rotations, land purchase contracts, and shapefiles). We offer a complete **Data Collection Service** for an optional upcharge of **$15/acre** to compile, clean, and organize these records for you.
+                </p>
+            </div>
+
+            <p style="font-weight: 600; margin-bottom: 10px;">The turnkey service includes:</p>
+            <ul>
+                <li><strong>Professional Soil Sampling:</strong> Geo-referenced grid tests pulled directly from newly acquired tracts to establish actual nutrient volumes.</li>
+                <li><strong>Forensic Agronomy Reports:</strong> Analysis of crop extraction baselines and local soil physics to isolate the "excess" nutrient supply.</li>
+                <li><strong>IRS-Compliant Documentation:</strong> A structured, audit-ready valuation report prepared by agronomists that your CPA can immediately use to write off the asset value.</li>
+            </ul>
+        </div>
+
+        <!-- ================= PAGE 3 ================= -->
+        <div class="page-break">
+            <h2 class="section-title"><span>Pillar 02</span> Strategic Crop Insurance Detail</h2>
+            <p>
+                We look at crop insurance as a tool to establish a cash-flow floor for the operation. Federal crop insurance premiums are standardized by the USDA Risk Management Agency (RMA) — meaning they cost the exact same through every broker. We distinguish our service by coordinating coverage with your production costs and marketing plan.
+            </p>
+
+            <div class="info-card">
+                <h4>Shallow-Loss Stacked Protection</h4>
+                <p style="margin-bottom: 0; font-size: 14px;">
+                    Rather than purchasing basic 75% or 80% coverage, we specialize in layering policies. We stack the **Supplemental Coverage Option (SCO)** and **Enhanced Coverage Option (ECO)** on top of your base **Revenue Protection (RP)** policy to extend your revenue floor to 90% or 95%.
+                </p>
+            </div>
+
+            <p style="font-weight: 600; margin-bottom: 10px;">Key Strategy Focuses:</p>
+            <ul>
+                <li><strong>Breakeven Modeling:</strong> Customizing coverage parameters (basic, enterprise, or optional units) to ensure your revenue floor covers 100% of input costs.</li>
+                <li><strong>Maximum Subsidy Capture:</strong> Structuring your enterprise units to capture the highest possible USDA premium subsidies, reducing your net premium out-of-pocket.</li>
+                <li><strong>Compliance Timelines:</strong> Managing all crop insurance reporting dates (Sales Closing March 15, Acreage July 15) in tandem with your agronomists.</li>
+            </ul>
+        </div>
+
+        <!-- ================= PAGE 4 ================= -->
+        <div class="page-break">
+            <h2 class="section-title"><span>Pillar 03</span> Grain Marketing Intelligence Detail</h2>
+            <p>
+                Executing grain sales without knowing your crop insurance guarantees is highly risky. We align your selling targets directly with your crop insurance coverage to take the fear and emotion out of marketing.
+            </p>
+
+            <div class="info-card">
+                <h4>Eliminating the "Fear of Crop Failure"</h4>
+                <p style="margin-bottom: 0; font-size: 14px;">
+                    Many producers hesitate to pre-sell grain during seasonal spring rallies because they fear a crop failure will leave them unable to fulfill their contract. By establishing a robust 90% or 95% revenue floor, you can aggressively lock in profitable forward prices, knowing your insurance indemnity will cover shortfalls.
+                </p>
+            </div>
+
+            <p style="font-weight: 600; margin-bottom: 10px;">Marketing Services Include:</p>
+            <ul>
+                <li><strong>Margin Triggers:</strong> Setting precise sell limits based on real-time futures pricing and your specific operation's breakeven metrics.</li>
+                <li><strong>Weekly Basis Audits:</strong> Comprehensive tracking of local elevator bids, rail rates, and processor logistics to optimize delivery locations.</li>
+                <li><strong>Direct Strategy Integration:</strong> Coordinating HTA contracts, cash contracts, and hedging tools directly with your crop insurance agent to verify coverage boundaries.</li>
+            </ul>
+        </div>
+
+        <!-- ================= TERMS & SIGN-OFF ================= -->
+        <div class="proposal-footer">
+            <p><strong>Disclaimer:</strong> Legacy Farmers is an agricultural strategic consulting practice. Legacy nutrient deduction calculations are provided for illustration based on regional soil baselines, executed in partnership with Boa Safra Ag, and must be reviewed by your independent CPA. All crop insurance policies are written and placed through licensed crop insurance agent partners and USDA Approved Insurance Providers. Rates are federally regulated and fixed. Advisory pricing is subject to signed consulting agreements.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
