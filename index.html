@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legacy Farmers | Coordinated Farm Risk, Tax & Marketing Strategy</title>
+    <meta name="description" content="Maximize your farm's equity, claim soil nutrient tax deductions, and secure your crop revenue with a unified advisory plan.">
+    <!-- Google Fonts: Outfit & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-sun"></i></span>
+                <span class="logo-text">Legacy <span class="accent-text">Farmers</span></span>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#services" class="nav-link">Our Services</a>
+                <a href="#contact" class="nav-link">Get Started</a>
+            </nav>
+            <div class="header-actions">
+                <a href="#contact" class="btn btn-outline header-cta">Connect With Us</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (The Hook) -->
+    <section class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge"><span class="badge-dot"></span> Integrated Farm Equity Strategy</div>
+                <h1 class="entrance-title">
+                    Legacy Farmers
+                </h1>
+                <p class="entrance-subtitle">
+                    A unified agricultural strategy aligning legacy nutrient deductions, custom crop insurance, and grain marketing intelligence to grow and protect your operation's equity.
+                </p>
+                <div class="hero-actions">
+                    <a href="#services" class="btn btn-primary">See Our Solutions <i class="fa-solid fa-arrow-down"></i></a>
+                    <a href="#contact" class="btn btn-secondary">Connect With Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Stalk Growth Timeline Section (Triangular/Alternating Layout) -->
+    <section id="services" class="stalk-section">
+        <div class="section-header">
+            <span class="section-pre-title">Core Solutions</span>
+            <h2 class="section-title">Three Pillars of Integrated Strategy</h2>
+            <p class="section-subtitle">Scroll down to see our coordinated services grow. Click on any pillar to view detailed strategy documentation.</p>
+        </div>
+
+        <div class="stalk-main-wrapper">
+            <!-- Growing Stalk Vector Container -->
+            <div class="stalk-line-container">
+                <svg class="stalk-svg" viewBox="0 0 100 1200" preserveAspectRatio="none">
+                    <!-- Background silent track -->
+                    <path class="stalk-track" d="M50,0 Q65,200 35,400 T65,800 T35,1200" fill="none" stroke="rgba(255, 255, 255, 0.05)" stroke-width="6" stroke-linecap="round"/>
+                    <!-- Active growing path with length normalized to 1 -->
+                    <path id="stalk-path" class="stalk-path" pathLength="1" d="M50,0 Q65,200 35,400 T65,800 T35,1200" fill="none" stroke="url(#stalk-gradient)" stroke-width="6" stroke-linecap="round"/>
+                    
+                    <defs>
+                        <linearGradient id="stalk-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#F59E0B" /> <!-- Harvest Gold -->
+                            <stop offset="60%" stop-color="#2E9E5C" /> <!-- Crop Green -->
+                            <stop offset="100%" stop-color="#1E6B3F" /> <!-- Deep Green -->
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- Stalk Rows containing nodes, leaves, and services -->
+            <div class="container stalk-rows-container">
+                
+                <!-- Row 1: Legacy Nutrient Deductions -->
+                <div class="stalk-row left-card" id="row-1">
+                    <div class="stalk-card-wrapper">
+                        <div class="service-card glass-card">
+                            <div class="pillar-number">Pillar 01</div>
+                            <div class="service-icon color-1"><i class="fa-solid fa-flask"></i></div>
+                            <h3>Legacy Nutrient Deductions</h3>
+                            <p class="service-partner">Referral Partner of Boa Safra Ag</p>
+                            <p class="service-desc">
+                                Claim deductions on the fertility value of soils (phosphorus, potassium, lime) present at the time of purchase or inheritance.
+                            </p>
+                            <a href="nutrient-deductions.html" class="btn-card-action">Read Details & Science <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="stalk-center-node">
+                        <div class="node-dot"></div>
+                        <svg class="leaf-svg leaf-left" viewBox="0 0 100 50">
+                            <path d="M100,25 Q50,0 0,25 Q50,50 100,25" fill="#2E9E5C" />
+                        </svg>
+                    </div>
+                    <div class="stalk-empty-space"></div>
+                </div>
+
+                <!-- Row 2: Strategic Crop Insurance -->
+                <div class="stalk-row right-card" id="row-2">
+                    <div class="stalk-empty-space"></div>
+                    <div class="stalk-center-node">
+                        <div class="node-dot"></div>
+                        <svg class="leaf-svg leaf-right" viewBox="0 0 100 50">
+                            <path d="M0,25 Q50,0 100,25 Q50,50 0,25" fill="#2E9E5C" />
+                        </svg>
+                    </div>
+                    <div class="stalk-card-wrapper">
+                        <div class="service-card glass-card">
+                            <div class="pillar-number">Pillar 02</div>
+                            <div class="service-icon color-2"><i class="fa-solid fa-shield-halved"></i></div>
+                            <h3>Strategic Crop Insurance</h3>
+                            <p class="service-partner">Licensed Agent Coordination</p>
+                            <p class="service-desc">
+                                Structure custom multi-peril coverage, optimizing premium subsidies and stacking SCO/ECO for comprehensive deductible protection.
+                            </p>
+                            <a href="crop-insurance.html" class="btn-card-action">Review Insurance Solutions <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3: Grain Marketing Intelligence -->
+                <div class="stalk-row left-card" id="row-3">
+                    <div class="stalk-card-wrapper">
+                        <div class="service-card glass-card">
+                            <div class="pillar-number">Pillar 03</div>
+                            <div class="service-icon color-3"><i class="fa-solid fa-chart-line"></i></div>
+                            <h3>Grain Marketing Intelligence</h3>
+                            <p class="service-partner">Market Performance Advisory</p>
+                            <p class="service-desc">
+                                Execute grain sales with clear, data-driven parameters based on your cost of production and guaranteed crop insurance bushels.
+                            </p>
+                            <a href="grain-marketing.html" class="btn-card-action">Explore Marketing Models <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="stalk-center-node">
+                        <div class="node-dot"></div>
+                        <svg class="leaf-svg leaf-left" viewBox="0 0 100 50">
+                            <path d="M100,25 Q50,0 0,25 Q50,50 100,25" fill="#2E9E5C" />
+                        </svg>
+                    </div>
+                    <div class="stalk-empty-space"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Intake Contact Form (Clean Inline Card at the bottom) -->
+    <section id="contact" class="contact-section">
+        <div class="container contact-container">
+            <div class="contact-info-block">
+                <h2>Connect With Legacy Farmers</h2>
+                <p>Submit your details to coordinate a consultation audit. We examine your county's historical metrics to layout immediate tax savings and insurance guarantee structures.</p>
+                
+                <div class="contact-bullets">
+                    <div class="bullet-item">
+                        <div class="bullet-icon"><i class="fa-solid fa-arrows-spin"></i></div>
+                        <div>
+                            <h4>Coordinated Execution</h4>
+                            <p>We work alongside your existing agronomists and CPAs to ensure seamless operations.</p>
+                        </div>
+                    </div>
+                    <div class="bullet-item">
+                        <div class="bullet-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                        <div>
+                            <h4>Compliance Focused</h4>
+                            <p>We submit comprehensive soil chemistry audits to make every tax deduction 100% compliant.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Card -->
+            <div class="contact-form-block glass-card">
+                <h3>Request Strategic Consultation</h3>
+                <p>Fill out the fields below, and an advisor will coordinate with our partners to reach out to you.</p>
+                
+                <form id="leadForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" class="form-control" placeholder="e.g. Samuel Green" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" class="form-control" placeholder="e.g. sam@greenfarms.com" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="location">State *</label>
+                            <input type="text" id="location" class="form-control" placeholder="e.g. Illinois" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="acres">Total Acres *</label>
+                            <input type="number" id="acres" class="form-control" placeholder="e.g. 1200" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Request Consultation</button>
+                </form>
+                
+                <div id="formSuccess" class="form-success-msg">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h4>Inquiry Submitted</h4>
+                    <p>Thank you! Your information has been securely saved. Our team will verify your state's regional baselines and contact you shortly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-icon"><i class="fa-solid fa-sun"></i></span>
+                    <span class="logo-text">Legacy <span class="accent-text">Farmers</span></span>
+                </a>
+                <p>Integrating tax savings, crop risk management, and grain marketing intelligence into one unified roadmap for modern agricultural producers.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Solutions</h4>
+                <a href="nutrient-deductions.html">Legacy Nutrient Deductions</a>
+                <a href="crop-insurance.html">Crop Insurance Structures</a>
+                <a href="grain-marketing.html">Grain Marketing Audits</a>
+            </div>
+
+            <div class="footer-links">
+                <h4>Partnerships</h4>
+                <a href="https://boasafraag.com" target="_blank" rel="noopener">Boa Safra Ag</a>
+                <a href="#">USDA Risk Management Agency</a>
+                <a href="#">Approved Insurance Providers</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom container">
+            <div class="compliance-disclaimer">
+                <p><strong>Compliance Notice:</strong> Legacy Farmers is an agricultural strategic advisory consulting service. All crop insurance policies are written and maintained through independent licensed crop insurance agents appointed with USDA Approved Insurance Providers (AIP). Premium rates are regulated and fixed by the USDA Risk Management Agency (RMA) and are identical across all insurance brokers. Legacy nutrient deductions are calculated using specialized agronomic testing standards in cooperation with Boa Safra Ag and must be reviewed and submitted by the client's certified public accountant (CPA).</p>
+            </div>
+            <div class="footer-meta">
+                <p>&copy; 2026 Legacy Farmers. All rights reserved.</p>
+                <div class="meta-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
