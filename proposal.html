@@ -207,6 +207,59 @@
             text-align: justify;
         }
 
+        /* Concierge Data Collection Matrix Layout */
+        .concierge-matrix {
+            display: grid;
+            grid-template-columns: 120px 1fr 1fr;
+            gap: 12px;
+            margin: 20px 0 30px 0;
+            background: #FFFFFF;
+        }
+
+        .matrix-header-x {
+            text-align: center;
+            font-weight: 700;
+            color: var(--primary);
+            padding: 8px;
+            text-transform: uppercase;
+            font-size: 10px;
+            line-height: 1.3;
+        }
+
+        .matrix-header-y {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--primary);
+            padding: 8px;
+            text-transform: uppercase;
+            font-size: 10px;
+            line-height: 1.3;
+        }
+
+        .matrix-cell {
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-light);
+            border-radius: 12px;
+            padding: 16px 12px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .matrix-cell strong {
+            display: block;
+            font-size: 18px;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .matrix-cell span {
+            font-size: 10px;
+            color: var(--text-muted);
+            display: block;
+        }
+
         /* === Print Override Rules === */
         @media print {
             body {
@@ -236,6 +289,11 @@
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
             }
+            .matrix-cell {
+                background-color: #F8FAFC !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
         }
     </style>
 </head>
@@ -257,69 +315,125 @@
         <!-- Strategic Pricing Table -->
         <div style="margin-top: 40px;">
             <h2 class="section-title">Program Pricing Sheet</h2>
-            <p>Our strategic services are billed individually to comply with federal insurance and tax guidelines, while functioning as a single coordinated program.</p>
+            <p style="margin-bottom: 20px;">To protect profit margins, our program coordinates customer-facing offerings with direct margin-enhancing services. Each is billed in compliance with federal guidelines.</p>
             
             <table class="pricing-table">
                 <thead>
                     <tr>
-                        <th style="width: 35%;">Service Component</th>
-                        <th style="width: 45%;">Description</th>
-                        <th style="width: 20%; text-align: right;">Rate / Cost</th>
+                        <th style="width: 25%;">Offering</th>
+                        <th style="width: 25%;">Service</th>
+                        <th style="width: 35%;">Service Goal</th>
+                        <th style="width: 15%; text-align: right;">Cost / Rate</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Service 1 -->
+                    <!-- Tax Strategy -->
                     <tr>
+                        <td rowspan="2" style="font-weight: 700; color: var(--primary); vertical-align: middle; border-bottom: 2px solid var(--border-color);">
+                            Tax Strategy<br>
+                            <span style="font-size: 11px; font-weight: normal; color: var(--text-muted);">Equity Recovery</span>
+                        </td>
                         <td class="desc-col">
                             <strong>Legacy Nutrient Deductions</strong>
-                            <span>Tax Equity Analysis</span>
                         </td>
                         <td>
-                            Turnkey soil sampling, agronomic testing, and replacement-value documentation of existing residual soil fertility (P & K) in partnership with Boa Safra Ag.
+                            Document and write off residual soil fertility (P & K) acquired during land purchases or inheritances.
                         </td>
                         <td class="price-col" style="text-align: right;">$40.00 / acre</td>
                     </tr>
-                    <!-- Service 1 (Optional Upcharge) -->
                     <tr>
-                        <td class="desc-col">
-                            <strong>Historical Data Collection</strong>
-                            <span>Optional Prep Upcharge</span>
+                        <td class="desc-col" style="border-bottom: 2px solid var(--border-color);">
+                            <strong>R&D Tax Credits</strong>
                         </td>
-                        <td>
-                            Retrieval, organization, and structuring of years of historical yield maps, fertilizer application logs, crop production history, shapefiles, and land purchase agreements.
+                        <td style="border-bottom: 2px solid var(--border-color);">
+                            Establish tax credits for operational testing, experimental trials, and equipment modifications.
                         </td>
-                        <td class="price-col" style="text-align: right;">$15.00 / acre <br><span style="font-size: 11px; font-weight: normal; color: var(--text-muted);">Optional Upcharge</span></td>
+                        <td class="price-col" style="text-align: right; border-bottom: 2px solid var(--border-color);">15% of Credit</td>
                     </tr>
-                    <!-- Service 2 -->
+                    
+                    <!-- Income Enhancement -->
                     <tr>
-                        <td class="desc-col">
+                        <td style="font-weight: 700; color: var(--primary); vertical-align: middle; border-bottom: 2px solid var(--border-color);">
+                            Income Enhancement<br>
+                            <span style="font-size: 11px; font-weight: normal; color: var(--text-muted);">Risk Floors</span>
+                        </td>
+                        <td class="desc-col" style="border-bottom: 2px solid var(--border-color);">
                             <strong>Strategic Crop Insurance</strong>
-                            <span>Risk Mitigation Floor</span>
                         </td>
-                        <td>
-                            Placement and maintenance of Multi-Peril Revenue Protection (RP) structured with SCO and ECO endorsements to cover shallow losses.
+                        <td style="border-bottom: 2px solid var(--border-color);">
+                            Optimize Multi-Peril coverage and stack SCO/ECO to set a 90% or 95% county-level revenue guarantee.
                         </td>
-                        <td class="price-col" style="text-align: right;">RMA Regulated<br><span style="font-size: 11px; font-weight: normal; color: var(--text-muted);">Paid to Insurance Co.</span></td>
+                        <td class="price-col" style="text-align: right; border-bottom: 2px solid var(--border-color);">RMA Regulated<br><span style="font-size: 10px; font-weight: normal; color: var(--text-muted);">Paid to Ins. Co</span></td>
                     </tr>
-                    <!-- Service 3 -->
+                    
+                    <!-- Grain Marketing -->
                     <tr>
-                        <td class="desc-col">
-                            <strong>Grain Marketing Intelligence</strong>
-                            <span>Revenue Margin Capture</span>
+                        <td style="font-weight: 700; color: var(--primary); vertical-align: middle; border-bottom: 2px solid var(--border-color);">
+                            Grain Marketing<br>
+                            <span style="font-size: 11px; font-weight: normal; color: var(--text-muted);">Margin Capture</span>
                         </td>
-                        <td>
-                            Advisory retainer coordinating crop pricing targets with crop insurance yield guarantees, weekly basis reports, and seasonal trend triggers.
+                        <td class="desc-col" style="border-bottom: 2px solid var(--border-color);">
+                            <strong>Marketing Intelligence</strong>
                         </td>
-                        <td class="price-col" style="text-align: right;">$5.00 / acre <br><span style="font-size: 11px; font-weight: normal; color: var(--text-muted);">Annual Retainer</span></td>
+                        <td style="border-bottom: 2px solid var(--border-color);">
+                            Lock in peak pre-harvest seasonal pricing targets backed directly by your insurance floor.
+                        </td>
+                        <td class="price-col" style="text-align: right; border-bottom: 2px solid var(--border-color);">$5.00 / acre</td>
+                    </tr>
+
+                    <!-- Data Strategy -->
+                    <tr>
+                        <td style="font-weight: 700; color: var(--primary); vertical-align: middle; border-bottom: 2px solid var(--border-color);">
+                            Data Strategy<br>
+                            <span style="font-size: 11px; font-weight: normal; color: var(--text-muted);">Operations Prep</span>
+                        </td>
+                        <td class="desc-col" style="border-bottom: 2px solid var(--border-color);">
+                            <strong>Data Concierge Service</strong>
+                        </td>
+                        <td style="border-bottom: 2px solid var(--border-color);">
+                            Full-service compilation and database cleanup of historical maps, contracts, and yields for filings.
+                        </td>
+                        <td class="price-col" style="text-align: right; border-bottom: 2px solid var(--border-color);">$10 – $15 / acre<br><span style="font-size: 10px; font-weight: normal; color: var(--text-muted);">Effort/Volume Matrix</span></td>
                     </tr>
                 </tbody>
             </table>
 
+            <!-- Concierge T-Chart Visual Matrix -->
+            <h3 style="font-size: 15px; margin: 25px 0 10px 0; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em;">Concierge Data Collection Pricing Matrix</h3>
+            <p style="font-size: 13px; margin-bottom: 15px; color: var(--text-muted);">Formatting and compiling historical agronomic records (yield maps, scale tickets, contracts, FSA sheets) is billed dynamically based on your volume and records structure:</p>
+            
+            <div class="concierge-matrix">
+                <div class="matrix-header-x"></div>
+                <div class="matrix-header-x">Low Effort <br><span style="font-size: 8px; font-weight: normal; text-transform: none; color: var(--text-muted);">(Organized cloud exports)</span></div>
+                <div class="matrix-header-x">High Effort <br><span style="font-size: 8px; font-weight: normal; text-transform: none; color: var(--text-muted);">(Paper logs or mixed systems)</span></div>
+                
+                <div class="matrix-header-y">Low Volume <br><span style="font-size: 8px; font-weight: normal; text-transform: none; color: var(--text-muted);">(< 1,000 Acres)</span></div>
+                <div class="matrix-cell">
+                    <strong>$12 / acre</strong>
+                    <span>Low Effort / Low Volume</span>
+                </div>
+                <div class="matrix-cell">
+                    <strong>$15 / acre</strong>
+                    <span>High Effort / Low Volume</span>
+                </div>
+                
+                <div class="matrix-header-y">High Volume <br><span style="font-size: 8px; font-weight: normal; text-transform: none; color: var(--text-muted);">(1,000+ Acres)</span></div>
+                <div class="matrix-cell">
+                    <strong>$10 / acre</strong>
+                    <span>Low Effort / High Volume</span>
+                </div>
+                <div class="matrix-cell">
+                    <strong>$12 / acre</strong>
+                    <span>High Effort / High Volume</span>
+                </div>
+            </div>
+
             <div class="info-card">
                 <h4>Coordinated Program Savings Example (100 Acres)</h4>
-                <p style="margin-bottom: 8px; font-size: 14px;"><strong>1. Tax Capital Recovered:</strong> $170,000 in soil deductions yields **$51,000** in tax savings (30% bracket).</p>
-                <p style="margin-bottom: 8px; font-size: 14px;"><strong>2. Marketing Upside:</strong> Pre-selling insured crop volume locks in an extra **$8,000** ($0.40/bu on 200 bu/ac).</p>
-                <p style="margin-bottom: 0; font-size: 14px;"><strong>3. Program Net Cost:</strong> $4,000 soil analysis fee + $500 marketing fee. **Net Capital Gained: $54,500**.</p>
+                <p style="margin-bottom: 8px; font-size: 14px;"><strong>1. Tax Strategy (Nutrients):</strong> $170,000 in soil deductions yields **$51,000** in tax savings (30% bracket).</p>
+                <p style="margin-bottom: 8px; font-size: 14px;"><strong>2. Tax Strategy (R&D):</strong> Identifying variable-rate R&D credits yields **$10,000** in direct tax liability offsets.</p>
+                <p style="margin-bottom: 8px; font-size: 14px;"><strong>3. Marketing Upside:</strong> Pre-selling insured crop volume locks in an extra **$8,000** ($0.40/bu on 200 bu/ac).</p>
+                <p style="margin-bottom: 0; font-size: 14px;"><strong>4. Program Net Fees:</strong> $4,000 soil fee + $1,500 R&D fee + $500 marketing fee + $1,200 concierge fee = $7,200. **Net Capital Gained: $61,800**.</p>
             </div>
         </div>
 
@@ -392,9 +506,52 @@
             </ul>
         </div>
 
+        <!-- ================= PAGE 5 ================= -->
+        <div class="page-break">
+            <h2 class="section-title"><span>Pillar 04</span> R&D Tax Credits Detail</h2>
+            <p>
+                The Federal Research and Development Tax Credit (IRS Section 41) is a powerful tool for modern farmers. If you are conducting trials, testing cover cropping systems, adjusting chemical prescriptions, or converting equipment to improve efficiency, you qualify for dollar-for-dollar tax credits.
+            </p>
+
+            <div class="info-card">
+                <h4>Qualified Agricultural Research (QRE)</h4>
+                <p style="margin-bottom: 0; font-size: 14px;">
+                    We conduct a detailed study of your operation to identify qualifying costs, including operator labor, experimental seeds/biologicals, and custom implement modifications. We compile an audit-ready study pack to claim federal and state R&D tax offsets.
+                </p>
+            </div>
+
+            <p style="font-weight: 600; margin-bottom: 10px;">Eligible R&D Activities Include:</p>
+            <ul>
+                <li><strong>Agronomic Trials:</strong> Planting experimental seeds, variable-rate nitrogen trials, or comparing tillage setups.</li>
+                <li><strong>Technological Adjustments:</strong> Customizing row planters, retrofitting GPS sensors, or evaluating precision irrigation scripts.</li>
+                <li><strong>Cover Cropping Studies:</strong> Evaluating cover crop species mixtures to optimize nitrogen fixation or soil composition.</li>
+            </ul>
+        </div>
+
+        <!-- ================= PAGE 6 ================= -->
+        <div class="page-break">
+            <h2 class="section-title"><span>Pillar 05</span> Data Collection (Concierge) Detail</h2>
+            <p>
+                To qualify for legacy nutrient deductions and crop insurance audits, you must compile historical records. If retrieving yield logs and legal deeds feels overwhelming, our Data Concierge service handles the complete organization process.
+            </p>
+
+            <div class="info-card">
+                <h4>Dynamic Pricing Structure</h4>
+                <p style="margin-bottom: 0; font-size: 14px;">
+                    Concierge services are priced on a matrix scaling from $10 to $15 per acre. A large operation with clean digital summaries is billed at **$10/acre**, while a smaller farm requiring manual document scanning is billed at **$15/acre** (details in Page 1 Matrix).
+                </p>
+            </div>
+
+            <p style="font-weight: 600; margin-bottom: 10px;">Information Retrieved & Organized:</p>
+            <ul>
+                <li><strong>Historical Records:</strong> Yield maps, scale tickets, grain sales contracts, and fertilizer receipts.</li>
+                <li><strong>Land Records:</strong> Deed histories, boundary shapefiles, FSA map outlines, and certified acreage summaries.</li>
+            </ul>
+        </div>
+
         <!-- ================= TERMS & SIGN-OFF ================= -->
         <div class="proposal-footer">
-            <p><strong>Disclaimer:</strong> Legacy Farmers is an agricultural strategic consulting practice. Legacy nutrient deduction calculations are provided for illustration based on regional soil baselines, executed in partnership with Boa Safra Ag, and must be reviewed by your independent CPA. All crop insurance policies are written and placed through licensed crop insurance agent partners and USDA Approved Insurance Providers. Rates are federally regulated and fixed. Advisory pricing is subject to signed consulting agreements.</p>
+            <p><strong>Disclaimer:</strong> Legacy Farmers is an agricultural strategic consulting practice. Legacy nutrient deduction calculations are provided for illustration based on regional soil baselines, executed in partnership with Boa Safra Ag, and must be reviewed by your independent CPA. R&D Tax Credit studies are billed on a contingency basis and must be finalized by your tax preparer. All crop insurance policies are written and placed through licensed crop insurance agent partners and USDA Approved Insurance Providers. Rates are federally regulated and fixed. Advisory pricing is subject to signed consulting agreements.</p>
         </div>
 
     </div>
